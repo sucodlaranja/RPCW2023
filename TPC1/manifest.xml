@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>Era uma vez...</título>
+        <subtítulo>Este é opcional</subtítulo>
+        <data>AAAA-MM-DD</data>
+        <autor>
+            <nome>Nome do Autor</nome>
+            <id>PG50375</id>
+            <gitlink>Link para o repo</gitlink>
+        </autor>
+        <uc>Designação da UC</uc>
+    </meta>
+    <resumo>
+        <p>Parágrafo 1</p>
+        <!-- Possibilidade de bolds, itálicos e links -->
+        <p>Parágrafo 2 <b>isto fica a bold</b> <i>isto fica a itálico</i></p>
+        <p>Parágrafo 3 com uma <xref url="URL para o recurso">referência externa</xref></p>
+    </resumo>
+    <resultados>
+        <resultado path="link relativo para o ficheiro">Descrição do que é</resultado>
+    </resultados>
+</manifesto>
