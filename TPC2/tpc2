@@ -1,0 +1,18 @@
+arq.xml
+
+
+desmembrar em arq1.xml, arq2.xml
+
+usar em python 
+pip install beautifulsup e lxxml para ler xml
+
+
+
+localhost:8000/1 response arq1.xml
+
+criar index.html com links
+
+
+
+--------------------
+responder com .html em vez de xml
