@@ -1,53 +1,23 @@
 <ARQELEM>
-  <TIPO ASSUNTO="arqueossitio"/>
-  <IDENTI>
-   Santa Cruz
-  </IDENTI>
-  <DESCRI>
-   <LIGA TERMO="miliÃ¡rio">
-    MiliÃ¡rios
-   </LIGA>
-  </DESCRI>
-  <CRONO>
-   RomanizaÃ§Ã£o
-  </CRONO>
-  <LUGAR>
-   Santa Cruz (1km)
-  </LUGAR>
-  <FREGUE>
-   Souto
-  </FREGUE>
-  <CONCEL>
-   Terras de Bouro
-  </CONCEL>
-  <CODADM>
-   031014
-  </CODADM>
-  <LATITU>
-   525
-  </LATITU>
-  <LONGIT>
-   182,5
-  </LONGIT>
-  <ALTITU>
-   130m
-  </ALTITU>
-  <ACESSO>
-   Os
-   <LIGA TERMO="miliÃ¡rio">
-    miliÃ¡rios
-   </LIGA>
-   estÃ£o actualmente de pÃ©, junto a
+<TIPO ASSUNTO="arqueossitio"/>
+<IDENTI> Santa Cruz </IDENTI>
+<DESCRI>
+<LIGA TERMO="miliÃ¡rio"> MiliÃ¡rios</LIGA>
+</DESCRI>
+<CRONO>RomanizaÃ§Ã£o </CRONO>
+<LUGAR> Santa Cruz (1km) </LUGAR>
+<FREGUE> Souto </FREGUE>
+<CONCEL> Terras de Bouro </CONCEL>
+<CODADM> 031014 </CODADM>
+<LATITU> 525 </LATITU>
+<LONGIT> 182,5 </LONGIT>
+<ALTITU> 130m </ALTITU>
+<ACESSO>Os <LIGA TERMO="miliÃ¡rio"> miliÃ¡rios</LIGA> estÃ£o actualmente de pÃ©, junto a
 um caminho de terra batida, aproximadamente a 1km a NE do lugar de Santa
 Cruz. Foram desenterrados por uma mÃ¡quina e encontravam-se provavelmente in
-situ.
-  </ACESSO>
-  <DESARQ>
-   No sÃ­tio referido estÃ£o trÃªs
-   <LIGA TERMO="miliÃ¡rio">
-    miliÃ¡rios
-   </LIGA>
-   inteiros e outros trÃªs fragmentados. Em quatro deles Ã© possÃ­vel ler-se a
+situ. </ACESSO>
+<DESARQ>No sÃ­tio referido estÃ£o trÃªs <LIGA TERMO="miliÃ¡rio"> miliÃ¡rios</LIGA>
+inteiros e outros trÃªs fragmentados. Em quatro deles Ã© possÃ­vel ler-se a
 milha XIV.
 
 MiliÃ¡rio de Tito e Domiciano: miliÃ¡rio inteiro, em granito de grÃ£o muito
@@ -120,22 +90,12 @@ MiliÃ¡rio inteiro: Granito de grÃ£o muito grosseiro. SuperfÃ­cie muito
 alterada. InscriÃ§Ã£o muito delida. Altura: 213; diÃ¢metro: 62/63; letras: 10.
 
 MiliÃ¡rio fragmentado: Granito de grÃ£o mÃ©dio. NÃ£o possui qualquer inscriÃ§Ã£o.
-Altura: 95; diÃ¢metro: 62.
-  </DESARQ>
-  <INTERP>
-   Conjunto de seis miliÃ¡rios pertencentes Via Nova (Geira), datados
-entre o sÃ©c. I e IV.
-  </INTERP>
-  <BIBLIO>
-   MARTINS, M. (1990) O Povoamento Proto-HistÃ³rico e a RomanizaÃ§Ã£o da
+Altura: 95; diÃ¢metro: 62.</DESARQ>
+<INTERP> Conjunto de seis miliÃ¡rios pertencentes Via Nova (Geira), datados
+entre o sÃ©c. I e IV. </INTERP>
+<BIBLIO> MARTINS, M. (1990) O Povoamento Proto-HistÃ³rico e a RomanizaÃ§Ã£o da
 Bacia do Curso do MÃ©dio CÃ¡vado, Cadernos de Arqueologia - Monografias, 5,
-Universidade do Minho, Braga, pp. 94-95.
-  </BIBLIO>
-  <AUTOR>
-   Manuela Martins
-  </AUTOR>
-  <DATA>
-   04-FEV-1998
-  </DATA>
- </ARQELEM>
- 
+Universidade do Minho, Braga, pp. 94-95. </BIBLIO>
+<AUTOR> Manuela Martins </AUTOR>
+<DATA>04-FEV-1998</DATA>
+</ARQELEM>

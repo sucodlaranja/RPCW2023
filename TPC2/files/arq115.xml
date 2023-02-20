@@ -1,42 +1,19 @@
 <ARQELEM>
-  <TIPO ASSUNTO="arqueossitio"/>
-  <IDENTI>
-   Lindoso
-  </IDENTI>
-  <DESCRI>
-   Castelo
-  </DESCRI>
-  <CRONO>
-   Idade MÃ©dia
-  </CRONO>
-  <LUGAR>
-   Lindoso
-  </LUGAR>
-  <FREGUE>
-   Lindoso
-  </FREGUE>
-  <CONCEL>
-   Ponte da Barca
-  </CONCEL>
-  <CODADM>
-   160612
-  </CODADM>
-  <LATITU>
-   544,2
-  </LATITU>
-  <LONGIT>
-   194,5
-  </LONGIT>
-  <ALTITU>
-   462m
-  </ALTITU>
-  <ACESSO>
-   O acesso ao castelo faz-se pelo caminho municipal que liga a aldeia Ã 
+<TIPO ASSUNTO="arqueossitio"/>
+<IDENTI> Lindoso </IDENTI>
+<DESCRI> Castelo </DESCRI>
+<CRONO> Idade MÃ©dia</CRONO>
+<LUGAR> Lindoso </LUGAR>
+<FREGUE> Lindoso </FREGUE>
+<CONCEL> Ponte da Barca </CONCEL>
+<CODADM> 160612 </CODADM>
+<LATITU> 544,2 </LATITU>
+<LONGIT> 194,5 </LONGIT>
+<ALTITU> 462m </ALTITU>
+<ACESSO>O acesso ao castelo faz-se pelo caminho municipal que liga a aldeia Ã 
 estrada nacional EN.304-1 (ligaÃ§Ã£o Ponte da Barca Ã  fronteira da Madalena -
-troÃ§o do futuro IC.28). O monumento estÃ¡ sinalizado.
-  </ACESSO>
-  <DESARQ>
-   As fontes documentais sÃ£o praticamente omissas em relaÃ§Ã£o aos tempos
+troÃ§o do futuro IC.28). O monumento estÃ¡ sinalizado.</ACESSO>
+<DESARQ>As fontes documentais sÃ£o praticamente omissas em relaÃ§Ã£o aos tempos
 medievos do castelo de Lindoso, nÃ£o se conhecendo nenhum documento que
 refira a sua fundaÃ§Ã£o. Com uma funÃ§Ã£o estritamente militar, o castelo de
 Lindoso nunca deteve qualquer estatuto jurÃ­dico-administrativo,
@@ -59,22 +36,11 @@ ordenado por D. JoÃ£o III em 17 de Julho de 1527, segundo o qual, a essa
 data, o castelo estava ermo, tendo entÃ£o a povoaÃ§Ã£o de Lindoso apenas 41
 moradores. A fortificaÃ§Ã£o medieval foi construÃ­da com pedra extraÃ­da no
 prÃ³prio local, como evidenciam os rasgos para colocaÃ§Ã£o de cunhas que se
-observam, quer nos
-   <LIGA TERMO="silhar">
-    silhares
-   </LIGA>
-   das muralhas quer
+observam, quer nos <LIGA TERMO="silhar"> silhares</LIGA> das muralhas quer
 nos afloramentos granÃ­ticos colocados a descoberto. AlicerÃ§adas na rocha de
-base, que por vezes foi ligeiramente afeiÃ§oada para receber os
-   <LIGA TERMO="silhar">
-    silhar
-   </LIGA>
-   , as muralhas sÃ£o formadas por parede de face
+base, que por vezes foi ligeiramente afeiÃ§oada para receber os <LIGA TERMO="silhar"> silhar</LIGA>, as muralhas sÃ£o formadas por parede de face
 dupla construÃ­da com blocos granÃ­ticos de grandes dimensÃµes, desenhando um
-   <LIGA TERMO="aparelho">
-    aparelho
-   </LIGA>
-   regular pseudo-isÃ³dono. As
+<LIGA TERMO="aparelho"> aparelho</LIGA> regular pseudo-isÃ³dono. As
 superfÃ­cies de encosto foram afeiÃ§oadas, determinando juntas muito
 estreitas, sem argamassa. As superfÃ­cies das faces apresentam-se lisas, com
 um acabamento mais refinado nas fiadas acima do nÃ­vel de circulaÃ§Ã£o e sem
@@ -85,45 +51,22 @@ a muralha, e porta no lado oposto (Sul), flanqueada por dois cubelos, com
 muralhas espessas incorporando cinco balcÃµes tipo "hourd", de que apenas se
 conservam alguns matacÃ£es, a edificaÃ§Ã£o revela caracterÃ­sticas
 tÃ©cnico-construtivas aparentemente homogÃ©neas, embora se distingam pelo
-menos duas fases: uma primeira de maior qualidade, com
-   <LIGA TERMO="silhar">
-    silhares
-   </LIGA>
-   de maiores dimensÃµes e faces com melhor acabamento, de
-superfÃ­cie lisa, ostentando sigla de
-   <LIGA TERMO="canteiro">
-    canteiro
-   </LIGA>
-   , correspondente Ã  metade inferior da torre de menagem,
+menos duas fases: uma primeira de maior qualidade, com <LIGA TERMO="silhar">silhares</LIGA> de maiores dimensÃµes e faces com melhor acabamento, de
+superfÃ­cie lisa, ostentando sigla de <LIGA TERMO="canteiro">canteiro</LIGA>, correspondente Ã  metade inferior da torre de menagem,
 cubelos, porta e troÃ§o NE da muralha - datarÃ¡ de meados ou terceiro quartel
-do sÃ©culo XIII; e uma segunda, qualitativamente mais fraca, com
-   <LIGA TERMO="aparelho">
-    aparelho
-   </LIGA>
-   de menores dimensÃµes, superfÃ­cies das
+do sÃ©culo XIII; e uma segunda, qualitativamente mais fraca, com <LIGA TERMO="aparelho"> aparelho</LIGA> de menores dimensÃµes, superfÃ­cies das
 faces menos bem tratadas e ausÃªncia absoluta de siglas, correspondente Ã 
 finalizaÃ§Ã£o das partes anteriormente iniciadas e construÃ§Ã£o dos restantes
 panos de muralha - terÃ¡ sido realizada nos finais do sÃ©culo. No canto NE
 localiza-se a cisterna, de planta de forma quadrangular, adossada Ã  muralha
-Este. Apresenta cobertura abobadada de
-   <LIGA TERMO="arco">
-    arco
-   </LIGA>
-   ligeiramente apontado, bem aparelhado e com
-   <LIGA TERMO="aduela">
-    aduelas
-   </LIGA>
-   sigladas, rematada superiormente por um enchimento irregular
+Este. Apresenta cobertura abobadada de<LIGA TERMO="arco"> arco</LIGA>
+ligeiramente apontado, bem aparelhado e com <LIGA TERMO="aduela">aduelas</LIGA> sigladas, rematada superiormente por um enchimento irregular
 de calhaus e cascalho que aflora ligeiramente acima da superfÃ­cie. NÃ£o
 ultrapassa os 3 metros de profundidade. Para a cronologia proposta para a
 fundaÃ§Ã£o do castelo, genericamente a segunda metade do sÃ©culo XIII,
 concorrem nÃ£o sÃ³ a tipologia das siglas e as produÃ§Ãµes cerÃ¢micas recolhidas
 nas escavaÃ§Ãµes arqueolÃ³gicas aÃ­ realizadas, mas tambÃ©m as "armas" afonsinas
-gravadas no topo do
-   <LIGA TERMO="arco">
-    arco
-   </LIGA>
-   exterior da porta Sul. Na
+gravadas no topo do<LIGA TERMO="arco"> arco</LIGA> exterior da porta Sul. Na
 sequÃªncia das guerras da RestauraÃ§Ã£o e pela sua posiÃ§Ã£o geo-estratÃ©gica, o
 castelo de Lindoso transformou-se numa praÃ§a forte de grande importÃ¢ncia,
 sendo entÃ£o palco de inÃºmeros combates entre Portugal e Castela, ora ocupado
@@ -133,15 +76,7 @@ adaptando-se Ã s novas exigÃªncias, determinadas pela introduÃ§Ã£o da ar
 nas tÃ¡cticas militares da Ã©poca. Se entre 1641 e 1643 o alcaide de Lindoso,
 Baltasar de Sousa Menezes reparou e fortificou melhor o castelo a expensas
 suas, a mais significativa intervenÃ§Ã£o foi sem dÃºvida a executada pelos
-espanhÃ³is anos depois, ao construÃ­rem uma nova muralha em torno da
-   <LIGA TERMO="cerca">
-    cerca
-   </LIGA>
-   medieval. De facto, a nova
-   <LIGA TERMO="cerca">
-    cerca
-   </LIGA>
-   de traÃ§ado poligonal tipo Vauban, de baixos muros abaluartados,
+espanhÃ³is anos depois, ao construÃ­rem uma nova muralha em torno da<LIGA TERMO="cerca"> cerca</LIGA> medieval. De facto, a nova<LIGA TERMO="cerca">cerca</LIGA>de traÃ§ado poligonal tipo Vauban, de baixos muros abaluartados,
 com os caracterÃ­sticos Ã¢ngulos avanÃ§ados protegidos por canhoneiras e
 guaritas, que ainda hoje subsistem, sendo uma obra de grande solidez e
 monumentalidade, tornou a fortaleza praticamente inexpugnÃ¡vel. Foi obra da
@@ -157,11 +92,7 @@ permanente no pÃ¡tio interior, com casernas, forno/padaria, armazÃ©ns, moinh
 e oratÃ³rio, servindo um corpo militar composto por cerca de 300 homens
 (conforme documentam plantas dos inÃ­cios e meados do sÃ©culo XVIII). A
 tÃ©cnica construtiva da muralha abaluartada Ã© completamente distinta da
-medieval. O
-   <LIGA TERMO="aparelho">
-    aparelho
-   </LIGA>
-   Ã© irregular, formado por
+medieval. O <LIGA TERMO="aparelho"> aparelho</LIGA> Ã© irregular, formado por
 calhaus sem afeiÃ§oamento de dimensÃµes muito variÃ¡veis, dispondo-se em
 manposteria com juntas muito largas, Ã  excepÃ§Ã£o dos cunhais dos baluartes,
 que apresentam blocos de maiores dimensÃµes, afeiÃ§oados no encosto das
@@ -189,38 +120,24 @@ ter sido classificado como Monumento Nacional. Na dÃ©cada de 40 foi objecto
 de obras de restauro e conservaÃ§Ã£o por parte da D.G.E.M.N.. Em 18 de
 Fevereiro de 1976, por despacho exarado nos termos do Decreto-Lei nÂº 48059,
 de 23 de Novembro de 1967, passou para administraÃ§Ã£o do Parque Nacional da
-Peneda-GerÃªs. EstÃ¡ em excelente estado de conservaÃ§Ã£o.
-  </DESARQ>
-  <INTERE>
-   Trata-se de um monumento de inegÃ¡vel significado histÃ³rico regional e de
+Peneda-GerÃªs. EstÃ¡ em excelente estado de conservaÃ§Ã£o.</DESARQ>
+<INTERE>Trata-se de um monumento de inegÃ¡vel significado histÃ³rico regional e de
 excepcional valor cientÃ­fico e patrimonial, fundamental para a compreensÃ£o
 dos povoamento medieval e definiÃ§Ã£o da fronteira na regiÃ£o, classificado
 como Monumento Nacional (Dec. 20985, de 7-3-1932), sob administraÃ§Ã£o do
 PNPG. Constitui jÃ¡ uma importante atracÃ§Ã£o turÃ­stica. Foi recentemente
 objecto de um "projecto de tratamento museolÃ³gico e rentabilizaÃ§Ã£o
 cultural", abrigando actualmente um Centro de InterpretaÃ§Ã£o do
-PNPG.
-  </INTERE>
-  <BIBLIO>
-   ALMEIDA, C.A.F.(1987). Alto Minho, (novos guias de Portugal, 5), Editorial
-PresenÃ§a, Lisboa, 1987.
-  </BIBLIO>
-  <BIBLIO>
-   FONTES, L. e REGALO, H.J.L.(1992). "Lindoso, Um Castelo no Parque Nacional
+PNPG.</INTERE>
+<BIBLIO>ALMEIDA, C.A.F.(1987). Alto Minho, (novos guias de Portugal, 5), Editorial
+PresenÃ§a, Lisboa, 1987. </BIBLIO>
+<BIBLIO>FONTES, L. e REGALO, H.J.L.(1992). "Lindoso, Um Castelo no Parque Nacional
 ", Correio da Natureza, 16, Instituto de ConservaÃ§Ã£o da Natureza, Lisboa,
-1992, pp.18-23.
-  </BIBLIO>
-  <BIBLIO>
-   FONTES, L. e REGALO, H.J.L.(1994). "A componente arqueolÃ³gica do "Projecto
+1992, pp.18-23. </BIBLIO>
+<BIBLIO>FONTES, L. e REGALO, H.J.L.(1994). "A componente arqueolÃ³gica do "Projecto
 de Tratamento MuseolÃ³gico e RentabilizaÃ§Ã£o Cultural" do Castelo do Lindoso",
 Actas V Jornadas ArqueolÃ³gicas (20, 21 e 22 Maio 1993), I, AssociaÃ§Ã£o dos
-ArqueÃ³logos Portugueses, Lisboa, 1994, pp.33-44.
-  </BIBLIO>
-  <AUTOR>
-   Luis Fontes
-  </AUTOR>
-  <DATA>
-   04-FEV-1998
-  </DATA>
- </ARQELEM>
- 
+ArqueÃ³logos Portugueses, Lisboa, 1994, pp.33-44. </BIBLIO>
+<AUTOR> Luis Fontes </AUTOR>
+<DATA>04-FEV-1998</DATA>
+</ARQELEM>
