@@ -10,8 +10,8 @@ http
       file = "index.html";
       res.writeHead(200, { "Content-Type": "text/html" });
     } else {
-      res.writeHead(200, { "Content-Type": "text/xml" });
-      file = "files/arq" + number + ".xml";
+      res.writeHead(200, { "Content-Type": "text/html" });
+      file = "files/arq" + number + ".html";
     }
     fs.readFile(file, function (err, data) {
       if (err) {
