@@ -17,6 +17,15 @@ exports.getPessoas = async () => {
   }
 };
 
+exports.getPessoa = async (id) => {
+  try {
+    const r = await axios.get("http://localhost:3000/pessoas?id=" + id);
+    return Object.entries(r.data[0]);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 exports.getPessoasOrdenada = async () => {
   try {
     const r = await this.getPessoas();

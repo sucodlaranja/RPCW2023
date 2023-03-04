@@ -8,7 +8,7 @@ http
     const dicUrl = url.parse(req.url, true);
 
     const separatedPath = dicUrl.path.split("/");
-
+    console.log(separatedPath);
     if (dicUrl.path == "/") {
       res.writeHead(200, { "Content-Type": "text/html", charset: "utf-8" });
       res.write(mypages.indexPage());
@@ -18,7 +18,11 @@ http
       res.writeHead(200, { "Content-Type": "text/html", charset: "utf-8" });
       res.write(mypages.pessoasPage(pessoas));
       res.end();
-    } else if (dicUrl.path === "/w3.css") {
+    } else if (
+      dicUrl.path === "/w3.css" ||
+      separatedPath[2] === "w3.css" ||
+      separatedPath[3] === "w3.css"
+    ) {
       fs.readFile("w3.css", (err, data) => {
         res.writeHead(200, { "Content-Type": "text/css" });
 
@@ -30,6 +34,15 @@ http
       const pessoasordenada = await getRequests.getPessoasOrdenada();
       res.writeHead(200, { "Content-Type": "text/html", charset: "utf-8" });
       res.write(mypages.pessoasPage(pessoasordenada));
+      res.end();
+    } else if (separatedPath[1] === "pessoa" || separatedPath[2] === "pessoa") {
+      console.log(separatedPath[2] + "entering stuff");
+      if (separatedPath[2] === "pessoa") {
+        separatedPath[2] = separatedPath[3];
+      }
+      const pessoa = await getRequests.getPessoa(separatedPath[2]);
+      res.writeHead(200, { "Content-Type": "text/html", charset: "utf-8" });
+      res.write(mypages.pessoaPage(pessoa));
       res.end();
     } else if (dicUrl.path === "/sexo") {
       const pessoasSexDist = await getRequests.getPessoasSexDist();

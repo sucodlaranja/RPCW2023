@@ -48,7 +48,8 @@ exports.pessoasPage = (lista) => {
                     ${lista
                       .map(
                         (item) => `<tr>
-                        <td>${item.id}</td>
+                        
+                        <td><a href="pessoa/${item.id}">${item.id}</a></td>
                         <td>${item.nome}</td>
                     <td>${item.sexo}</td>
                     <td>${item.idade}</td>
@@ -56,8 +57,8 @@ exports.pessoasPage = (lista) => {
                       )
                       .join("")}
                       
-                      </table>
-               
+                      </tabe>
+               l
             </body>
         </html>
     `;
@@ -94,4 +95,69 @@ exports.distPage = (lista) => {
               </body>
           </html>
       `;
+};
+
+exports.pessoaPage = (pessoa) => {
+  let html = `
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>${pessoa[0][1]}</title>
+            <link rel="stylesheet" href="../w3.css">
+        </head>
+        <body>
+            <div class="w3-card-4">
+                <header class="w3-margin">
+                    <h1 class="w3-left w3-text-white">${pessoa[0][1]}</h1>
+                </header>
+                <div class="w3-container w3-round-xlarge w3-blue-grey">
+                    <ul class="w3-ul">
+                    <a href="/" class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge w3-center-elem">Voltar</a>
+`;
+
+  pessoa.forEach(([key, value]) => {
+    if (value instanceof Object && !(value instanceof Array)) {
+      html += `
+                <li class="w3-bar no-padding w3-hover-teal">
+                    <div class="w3-bar-item w3-round-large">
+                        <span class="w3-tag w3-padding w3-round-large w3-teal w3-center">${key}</span>
+                            <ul class="w3-ul w3-margin-left">
+`;
+      Object.entries(value).forEach(([key2, value2]) => {
+        html += `
+                                <li class="w3-bar no-padding">
+                                    <div class="w3-bar-item w3-round-large">
+                                        <span class="w3-tag w3-padding w3-round-large w3-teal w3-center">${key2}</span>
+                                        <span class="w3-margin-left">${value2}</span>
+                                    </div>
+                                </li>
+`;
+      });
+
+      html += `
+                            </ul>
+                    </div>
+                </li>
+`;
+    } else {
+      html += `
+                                <li class="w3-bar no-padding w3-hover-teal">
+                                    <div class="w3-bar-item w3-round-large">
+                                        <span class="w3-tag w3-padding w3-round-large w3-teal w3-center">${key}</span>
+                                        <span class="w3-margin-left">${value}</span>
+                                    </div>
+                                </li>
+        `;
+    }
+  });
+
+  html += `
+                    </ul>
+                </div>
+            </div>
+        </body>
+    </html>
+`;
+  return html;
 };
