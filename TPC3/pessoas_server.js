@@ -8,7 +8,7 @@ http
     const dicUrl = url.parse(req.url, true);
 
     const separatedPath = dicUrl.path.split("/");
-    console.log(separatedPath);
+
     if (dicUrl.path == "/") {
       res.writeHead(200, { "Content-Type": "text/html", charset: "utf-8" });
       res.write(mypages.indexPage());
@@ -36,7 +36,6 @@ http
       res.write(mypages.pessoasPage(pessoasordenada));
       res.end();
     } else if (separatedPath[1] === "pessoa" || separatedPath[2] === "pessoa") {
-      console.log(separatedPath[2] + "entering stuff");
       if (separatedPath[2] === "pessoa") {
         separatedPath[2] = separatedPath[3];
       }
