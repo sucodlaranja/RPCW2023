@@ -16,8 +16,6 @@ var alunosServer = http.createServer(function (req, res) {
   var d = new Date().toISOString().substring(0, 16);
   console.log(req.method + " " + req.url + " " + d);
 
-  splitedReq = req.url.split("/");
-  console.log(splitedReq);
   // Handling request
   if (static.staticResource(req)) {
     static.serveStaticResource(req, res);
@@ -33,36 +31,6 @@ var alunosServer = http.createServer(function (req, res) {
             // Render page with the student's list
             res.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
             res.write(templates.todoList(json.todo, d));
-            res.end();
-          });
-        } else if (splitedReq[1] === "delete") {
-          fs.readFile("db.json", "utf8", function (err, data) {
-            const jsonDelete = JSON.parse(data);
-
-            const element = jsonDelete.todo.find(
-              (todo) => todo.id === parseInt(splitedReq[2])
-            );
-            jsonDelete.todo = jsonDelete.todo.filter(
-              (todo) => todo.id !== parseInt(splitedReq[2])
-            );
-
-            fs.writeFile("db.json", JSON.stringify(jsonDelete), function (err) {
-              if (err) throw err;
-              console.log("Saved!");
-            });
-            res.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
-            res.write(templates.deleteTodo(element, d));
-            res.end();
-          });
-        } else if (splitedReq[1] === "edit") {
-          fs.readFile("db.json", "utf8", function (err, data) {
-            if (err) throw err;
-            const jsonEdit = JSON.parse(data);
-            const element = jsonEdit.todo.find(
-              (todo) => todo.id === parseInt(splitedReq[2])
-            );
-            res.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
-            res.write(templates.editTodo(element, d));
             res.end();
           });
         } else {
@@ -84,14 +52,39 @@ var alunosServer = http.createServer(function (req, res) {
             if (result) {
               fs.readFile("db.json", "utf8", function (err, data) {
                 if (err) throw err;
-                var json = JSON.parse(data);
-                json.todo.push({
-                  id: json.todo.length,
-                  owner: result.owner,
-                  description: result.description,
-                  date: d,
-                  checked: false,
-                });
+                const json = JSON.parse(data);
+                console.log(result);
+                if (result.type === "do") {
+                  json.todo.map((todo) => {
+                    if (todo.id === parseInt(result.id)) todo.checked = true;
+                  });
+                } else if (result.type === "undo") {
+                  json.todo.map((todo) => {
+                    if (todo.id === parseInt(result.id)) todo.checked = false;
+                  });
+                } else if (result.type === "delete") {
+                  json.todo = json.todo.filter((todo) => {
+                    return todo.id !== parseInt(result.id);
+                  });
+                } else if (result.type === "startEdit") {
+                  res.write(templates.todoList(json.todo, d, true, result.id));
+                } else if (result.type === "edit") {
+                  json.todo.map((todo) => {
+                    if (todo.id === parseInt(result.id)) {
+                      if (result.owner) todo.owner = result.owner;
+                      if (result.description)
+                        todo.description = result.description;
+                    }
+                  });
+                } else {
+                  json.todo.push({
+                    id: json.todo.length,
+                    owner: result.owner,
+                    description: result.description,
+                    date: d,
+                    checked: false,
+                  });
+                }
                 fs.writeFile("db.json", JSON.stringify(json), function (err) {
                   if (err) throw err;
                   console.log("Saved!");
@@ -99,29 +92,9 @@ var alunosServer = http.createServer(function (req, res) {
                 res.writeHead(200, {
                   "Content-Type": "text/html;charset=utf-8",
                 });
-                res.write(templates.todoList(json.todo, d));
-                res.end();
-              });
-            }
-          });
-        } else if (splitedReq[1] === "edit") {
-          res.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
-          collectRequestBodyData(req, (result) => {
-            if (result) {
-              fs.readFile("db.json", "utf8", function (err, data) {
-                if (err) throw err;
-                var json = JSON.parse(data);
-                const element = json.todo.find(
-                  (todo) => todo.id === parseInt(splitedReq[2])
-                );
-                element.owner = result.owner;
-                element.description = result.description;
-                element.date = d;
-                fs.writeFile("db.json", JSON.stringify(json), function (err) {
-                  if (err) throw err;
-                  console.log("Saved!");
-                });
-                res.write(templates.editTodo(element, d, true));
+                if (result.type !== "startEdit") {
+                  res.write(templates.todoList(json.todo, d));
+                }
                 res.end();
               });
             }
