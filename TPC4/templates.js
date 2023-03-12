@@ -1,5 +1,5 @@
-exports.todoList = function (slist, d, edit = false, id) {
-  var pagHTML = `
+exports.todoList = function (slist, d, id = "") {
+  let pagHTML = `
       <!DOCTYPE html>
       <html>
           <head>
@@ -31,7 +31,7 @@ exports.todoList = function (slist, d, edit = false, id) {
                   <br/>
                   <button class="w3-btn w3-green w3-mb-2 " type="submit">Add</button>
               </form> `;
-  if (edit) {
+  if (id !== "") {
     element = slist.find((todo) => todo.id === parseInt(id));
     pagHTML += `<form class="w3-container" method="POST">
               <fieldset>
@@ -67,6 +67,7 @@ exports.todoList = function (slist, d, edit = false, id) {
                           </tr>
                   `;
   const todoList = slist.filter((todo) => !todo.checked);
+
   for (let i = 0; i < todoList.length; i++) {
     pagHTML += `
                   <tr>
@@ -74,7 +75,7 @@ exports.todoList = function (slist, d, edit = false, id) {
                         <td>${todoList[i].description}</td>
                         <td>${todoList[i].date}</td>
                         <td class="w3-row">
-                        <form method="POST" class="w3-col m2">
+                                                <form method="POST" class="w3-col m2">
                                                 <input type="hidden" name="type" value="delete"  /> 
                                                 <input type="hidden"  name="id" value="${todoList[i].id}"/>
                                                 <button class="w3-btn w3-red w3-mb-2 " type="submit">delete</button>
@@ -142,7 +143,6 @@ exports.todoList = function (slist, d, edit = false, id) {
                                           </tr>
                                   `;
   }
-
   pagHTML += `
               </table>
               </div>

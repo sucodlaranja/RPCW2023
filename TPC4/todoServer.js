@@ -8,7 +8,7 @@ var templates = require("./templates");
 var static = require("./static.js");
 const fs = require("fs");
 const { parse } = require("querystring");
-
+const url = "http://localhost:3000/todo";
 // Server creation
 
 var alunosServer = http.createServer(function (req, res) {
@@ -24,13 +24,10 @@ var alunosServer = http.createServer(function (req, res) {
       case "GET":
         // GET /alunos --------------------------------------------------------------------
         if (req.url == "/") {
-          fs.readFile("db.json", "utf8", function (err, data) {
-            if (err) throw err;
-            var json = JSON.parse(data);
-
+          axios.get(url).then((response) => {
             // Render page with the student's list
             res.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
-            res.write(templates.todoList(json.todo, d));
+            res.write(templates.todoList(response.data, d));
             res.end();
           });
         } else {
@@ -50,50 +47,49 @@ var alunosServer = http.createServer(function (req, res) {
           res.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
           collectRequestBodyData(req, (result) => {
             if (result) {
-              fs.readFile("db.json", "utf8", function (err, data) {
-                if (err) throw err;
-                const json = JSON.parse(data);
-                console.log(result);
+              axios.get(url).then(async (response) => {
+                const json = response.data;
                 if (result.type === "do") {
-                  json.todo.map((todo) => {
-                    if (todo.id === parseInt(result.id)) todo.checked = true;
-                  });
+                  const elem = json.find(
+                    (todo) => todo.id === parseInt(result.id)
+                  );
+
+                  elem.checked = true;
+                  await axios.put(url + "/" + result.id, elem);
                 } else if (result.type === "undo") {
-                  json.todo.map((todo) => {
-                    if (todo.id === parseInt(result.id)) todo.checked = false;
-                  });
+                  const elem = json.find(
+                    (todo) => todo.id === parseInt(result.id)
+                  );
+
+                  elem.checked = false;
+                  await axios.put(url + "/" + result.id, elem);
                 } else if (result.type === "delete") {
-                  json.todo = json.todo.filter((todo) => {
-                    return todo.id !== parseInt(result.id);
-                  });
+                  await axios.delete(url + "/" + result.id);
                 } else if (result.type === "startEdit") {
-                  res.write(templates.todoList(json.todo, d, true, result.id));
+                  res.write(templates.todoList(json, d, result.id));
                 } else if (result.type === "edit") {
-                  json.todo.map((todo) => {
-                    if (todo.id === parseInt(result.id)) {
-                      if (result.owner) todo.owner = result.owner;
-                      if (result.description)
-                        todo.description = result.description;
-                    }
-                  });
+                  const todo = json.find(
+                    (todo) => todo.id === parseInt(result.id)
+                  );
+                  if (result.owner) todo.owner = result.owner;
+                  if (result.description) todo.description = result.description;
+                  await axios.put(url + "/" + result.id, todo);
                 } else {
-                  json.todo.push({
-                    id: json.todo.length,
+                  const newTodo = {
                     owner: result.owner,
                     description: result.description,
                     date: d,
                     checked: false,
-                  });
+                  };
+                  await axios.post(url, newTodo);
                 }
-                fs.writeFile("db.json", JSON.stringify(json), function (err) {
-                  if (err) throw err;
-                  console.log("Saved!");
-                });
+
                 res.writeHead(200, {
                   "Content-Type": "text/html;charset=utf-8",
                 });
                 if (result.type !== "startEdit") {
-                  res.write(templates.todoList(json.todo, d));
+                  const response = await axios.get(url);
+                  res.write(templates.todoList(response.data, d));
                 }
                 res.end();
               });
