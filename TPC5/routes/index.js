@@ -56,13 +56,12 @@ router.post("/add", function (req, res, next) {
 });
 
 router.post("/edit/:id", function (req, res, next) {
-  console.log(req.body);
   todo
     .getTodo(req.params.id)
     .then((newTask) => {
       if (req.body.owner) newTask.owner = req.body.owner;
       if (req.body.description) newTask.description = req.body.description;
-      console.log("newTask: ", newTask);
+
       todo.update(newTask).then(() => res.redirect("/"));
     })
     .catch((err) => res.render("error", { error: err }));
